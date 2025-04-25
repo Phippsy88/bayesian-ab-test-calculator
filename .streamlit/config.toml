@@ -12,3 +12,5 @@ backgroundColor = "#F1EEE3"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#000000"
 font = "sans serif"
+
+buttonColor = "#7DFF00"
