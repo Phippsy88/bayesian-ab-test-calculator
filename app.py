@@ -45,7 +45,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("📊 Bayesian A/B Test Calculator")
+st.title("📊 Vervaunt's Bayesian A/B Test Calculator")
 
 st.markdown("Use Bayesian inference to evaluate the probability that one variant is better than the other based on your test data.")
 
