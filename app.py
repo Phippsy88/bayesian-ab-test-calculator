@@ -1,26 +1,46 @@
 
 import streamlit as st
 import numpy as np
-import scipy.stats as stats
 
 st.set_page_config(page_title="Bayesian A/B Test Calculator", layout="centered")
+
+# Apply custom branding styles
 st.markdown("""
     <style>
-    body {
-        background-color: #F1EEE3;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    html, body, [class*="css"]  {
+        font-family: 'Inter', sans-serif;
+        background-color: #F2EEE3;
         color: #000000;
     }
-    .stSlider > div > div {
-        color: #000000;
+
+    h1, h2, h3 {
+        font-weight: 700;
+        letter-spacing: -0.5px;
     }
+
     .stButton>button {
         background-color: #7DFF00;
         color: #000000;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        padding: 0.6em 1.2em;
+        border-radius: 6px;
     }
+
+    .stSlider > div > div {
+        color: #000000;
+    }
+
     .stDataFrame {
         background-color: #ffffff;
         color: #000000;
+    }
+
+    .stMetric {
+        font-size: 18px;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -43,7 +63,6 @@ with st.form("ab_form"):
     submitted = st.form_submit_button("Calculate")
 
 if submitted:
-    # Simulate from posterior using Beta distribution
     samples = 100000
     a_samples = np.random.beta(a_conversions + 1, a_total - a_conversions + 1, samples)
     b_samples = np.random.beta(b_conversions + 1, b_total - b_conversions + 1, samples)
