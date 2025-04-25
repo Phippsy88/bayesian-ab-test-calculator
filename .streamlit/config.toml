@@ -13,4 +13,4 @@ secondaryBackgroundColor = "#FFFFFF"
 textColor = "#000000"
 font = "sans serif"
 
-buttonColor = "#7DFF00"
+buttonBackgroundColor = "#7DFF00"
