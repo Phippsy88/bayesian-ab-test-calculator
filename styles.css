@@ -11,7 +11,7 @@ h1, h2, h3 {
     letter-spacing: -0.5px;
 }
 
-.stButton>button {
+button {
     background-color: #7DFF00;
     color: #000000;
     font-weight: 600;
