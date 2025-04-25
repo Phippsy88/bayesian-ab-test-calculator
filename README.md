@@ -18,3 +18,4 @@ A simple Bayesian A/B test calculator built with Streamlit.
 pip install -r requirements.txt
 streamlit run app.py
 ```
+# bayesian-ab-test-calculator
