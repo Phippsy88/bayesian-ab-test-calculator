@@ -5,7 +5,7 @@ import numpy as np
 st.set_page_config(page_title="Bayesian A/B Test Calculator", layout="centered")
 
 # Apply custom branding styles
-st.markdown("""
+st.markdown('''
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -43,7 +43,7 @@ st.markdown("""
         font-size: 18px;
     }
     </style>
-""", unsafe_allow_html=True)
+''', unsafe_allow_html=True)
 
 st.title("📊 Vervaunt's Bayesian A/B Test Calculator")
 
