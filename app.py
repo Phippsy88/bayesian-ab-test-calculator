@@ -4,46 +4,12 @@ import numpy as np
 
 st.set_page_config(page_title="Bayesian A/B Test Calculator", layout="centered")
 
-# Apply custom branding styles
-st.markdown('''
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    html, body, [class*="css"]  {
-        font-family: 'Inter', sans-serif;
-        background-color: #F2EEE3;
-        color: #000000;
-    }
-
-    h1, h2, h3 {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    .stButton>button {
-        background-color: #7DFF00;
-        color: #000000;
-        font-weight: 600;
-        font-size: 16px;
-        border: none;
-        padding: 0.6em 1.2em;
-        border-radius: 6px;
-    }
-
-    .stSlider > div > div {
-        color: #000000;
-    }
-
-    .stDataFrame {
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    .stMetric {
-        font-size: 18px;
-    }
-    </style>
-''', unsafe_allow_html=True)
+# Call it at the top of your app
+local_css("styles.css")
 
 st.title("📊 Vervaunt's Bayesian A/B Test Calculator")
 
