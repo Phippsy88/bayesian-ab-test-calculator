@@ -1,15 +1,13 @@
 
 import streamlit as st
 import numpy as np
+local_css("styles.css")
 
 st.set_page_config(page_title="Bayesian A/B Test Calculator", layout="centered")
 
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-# Call it at the top of your app
-local_css("styles.css")
 
 st.title("📊 Vervaunt's Bayesian A/B Test Calculator")
 
